@@ -6,12 +6,19 @@ class Balloon{
 	boolean popped;
 
 	Nozzle nz;
+<<<<<<< HEAD
 	PopAnimation pa;
+=======
+>>>>>>> 1c28a3a71067e7b356875b005445e9fc4f3fe96b
 
 	Balloon(int ix, color col){
 		c = col;
 		x = ix;
+<<<<<<< HEAD
 		nz = new Nozzle(col);		
+=======
+		nz = new Nozzle(col);
+>>>>>>> 1c28a3a71067e7b356875b005445e9fc4f3fe96b
 	}
 
 	//methods
@@ -29,11 +36,14 @@ class Balloon{
 				if ((mouseX > (x-inflation*75)) && (mouseX < (x+inflation*75))) {
 					if ((mouseY > (y-inflation*100)) && (mouseY < (y+inflation*100))) {
 						popped = true;
+<<<<<<< HEAD
 						popSoundFile.play();
 						//popLines();
 						pa = new PopAnimation(x, y);
 						pa.showPopAnimation();
 						//ellipse(x, y, x+15, y+25);						
+=======
+>>>>>>> 1c28a3a71067e7b356875b005445e9fc4f3fe96b
 					}
 				}
 			}
@@ -67,6 +77,7 @@ class Balloon{
 		return flying;
 	}
 
+<<<<<<< HEAD
 	void popLines(){
 		stroke(0);						
 		strokeWeight(2);
@@ -77,4 +88,6 @@ class Balloon{
 
 	}
 
+=======
+>>>>>>> 1c28a3a71067e7b356875b005445e9fc4f3fe96b
 }
