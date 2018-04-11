@@ -4,23 +4,14 @@ class Balloon{
 	color c;
 	float inflation;
 	boolean popped;
-
 	Nozzle nz;
-<<<<<<< HEAD
 	PopAnimation pa;
-=======
->>>>>>> 1c28a3a71067e7b356875b005445e9fc4f3fe96b
-
 	Balloon(int ix, color col){
 		c = col;
 		x = ix;
-<<<<<<< HEAD
 		nz = new Nozzle(col);		
-=======
 		nz = new Nozzle(col);
->>>>>>> 1c28a3a71067e7b356875b005445e9fc4f3fe96b
 	}
-
 	//methods
 	void init(){
 		inflation = 0.1;
@@ -28,22 +19,17 @@ class Balloon{
 		popped = false;
 		y = int(random(height/2, height));	
 	}
-
 	void show(){
-
 		if (popped == false) {
 			if (mousePressed && (mouseButton == LEFT)) {
 				if ((mouseX > (x-inflation*75)) && (mouseX < (x+inflation*75))) {
 					if ((mouseY > (y-inflation*100)) && (mouseY < (y+inflation*100))) {
 						popped = true;
-<<<<<<< HEAD
 						popSoundFile.play();
 						//popLines();
 						pa = new PopAnimation(x, y);
 						pa.showPopAnimation();
 						//ellipse(x, y, x+15, y+25);						
-=======
->>>>>>> 1c28a3a71067e7b356875b005445e9fc4f3fe96b
 					}
 				}
 			}
@@ -59,13 +45,11 @@ class Balloon{
 			init();			
 		}
 	}
-
 	void inflate(){
 		if (inflation < 1) {
 			inflation += 0.1;
 		}
 	}
-
 	Boolean fly(){		
 		if (flying == true) {
 			y -= int(random(5, 10));		
@@ -76,8 +60,6 @@ class Balloon{
 		}
 		return flying;
 	}
-
-<<<<<<< HEAD
 	void popLines(){
 		stroke(0);						
 		strokeWeight(2);
@@ -85,9 +67,5 @@ class Balloon{
 		line(x, y+10, x, y+10);
 		line(x-10, y, x-50, y);
 		line(x, y-10, x, y-10);
-
 	}
-
-=======
->>>>>>> 1c28a3a71067e7b356875b005445e9fc4f3fe96b
 }
