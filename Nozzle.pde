@@ -10,7 +10,7 @@ class Nozzle{
 		fill(c);
 		stroke(c);
 		triangle(a, b, a+5, b+10, a-5, b+10);
-	}
+	}//s
 
 	
 }
